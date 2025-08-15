@@ -10,4 +10,14 @@
  //else {
     //alert("Any of the values cannot be less than 1, run the code again")
     //console.log("Value error")
- 
+    function getData(){
+      let AGE = document.getElementById("age").value;
+      let maxAGE= document.getElementById("maxAge").value;
+      let numPERDAY = document.getElementById("numberPerDay").value;
+      let sure = confirm("Sure of your numbers?")
+      if (sure) {
+          let totalRequired = (numPerDay*365)*(maxAge-age);
+          result.innerHTML = "Result: You will need " + totalRequired + " to last you until the ripe old age of " + maxAge;
+      }
+
+  }
