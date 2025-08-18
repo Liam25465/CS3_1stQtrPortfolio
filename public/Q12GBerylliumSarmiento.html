@@ -6,18 +6,18 @@
 <input id="Tip" /> <br><br>
 <label for="Service Charge">Service Charge: </label>
 <input id="Service Charge" /> <br><br>
-<p id="Total Meal">Total Meal: </p>
+<p id="result">Total Meal: </p>
 
 <button onclick="totalMeal()">Accept Input</button>
 <script>
     function totalMeal() {
-        let MEALPRICE = document.getElementById("Meal Price").value;
-        let TIP = document.getElementById("Tip").value;
-        let SERVICECHARGE = document.getElementById("Service Charge").value;
+        let MEALPRICE = Number(document.getElementById("Meal Price").value);
+        let TIP = Number(document.getElementById("Tip").value);
+        let SERVICECHARGE = Number(document.getElementById("Service Charge").value);
         let sure = confirm("Sure of your expenses?")
         if (sure) {
-        let n = MEALPRICE + TIP + (SERVICECHARGE/100*MEALPRICE);
-        let roundedtotalcost = n.toFixed(2);
+        let totalcost = MEALPRICE + TIP + (SERVICECHARGE/100*MEALPRICE);
+        let roundedtotalcost = totalcost.toFixed(2);
         result.innerHTML = roundedtotalcost;
         }
 
