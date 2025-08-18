@@ -10,8 +10,8 @@
 
 <button onclick="totalMeal()">Accept Input</button>
 <script>
-    function totalMeal()
-    let MEALPRICE = document.getByElementId("Meal Price").value;
+    function totalMeal() {
+        let MEALPRICE = document.getByElementId("Meal Price").value;
     let TIP = document.getElementById("Tip").value;
     let SERVICECHARGE = document.getElementById("Service Charge").value;
     let sure = confirm("Sure of your expenses?")
@@ -24,6 +24,9 @@
     else {
         alert("Run the code again");
     }
+    }
+
+    
 
 
 </script>
