@@ -17,7 +17,7 @@
         let sure = confirm("Sure of your expenses?")
         if (sure) {
         let totalcost = MEALPRICE + TIP + (SERVICECHARGE/100*MEALPRICE);
-        let roundedtotalcost = Number.totalcost.toFixed(2);
+        let roundedtotalcost = totalcost.toFixed(2);
         result.innerHTML = roundedtotalcost;
         }
 
