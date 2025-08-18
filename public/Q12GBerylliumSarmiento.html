@@ -1,0 +1,30 @@
+<body>
+<h2> Q1 2nd Graded Exercise submitted by Liam Sarmiento of 9Beryllium </h2><br><br>
+<label for="Meal Price">Meal Price: </label>
+<input id="Meal Price" /> <br><br>
+<label for="Tip">Tip: </label>
+<input id="Tip" /> <br><br>
+<label for="Service Charge">Service Charge: </label>
+<input id="Service Charge" /> <br><br>
+<p id="Total Meal">Total Meal: </p>
+
+<button onclick="totalMeal()">Accept Input</button>
+<script>
+    function totalMeal()
+    let MEALPRICE = document.getByElementId("Meal Price").value;
+    let TIP = document.getElementById("Tip").value;
+    let SERVICECHARGE = document.getElementById("Service Charge").value;
+    let sure = confirm("Sure of your expenses?")
+    if (sure) {
+        let totalcost = MEALPRICE + TIP + (SERVICECHARGE/100*MEALPRICE);
+        let roundedtotalcost = totalcost.toFixed(2)
+        result.innerHTML = roundedtotalcost;
+    }
+
+    else {
+        alert("Run the code again");
+    }
+
+
+</script>
+</body>
