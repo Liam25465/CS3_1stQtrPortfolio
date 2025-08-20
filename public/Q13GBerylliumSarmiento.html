@@ -1,0 +1,32 @@
+<body>
+<h2> Q1 3rd Graded Exercise submitted by Liam Sarmiento of 9Beryllium </h2>
+<p> Guess the number: **** </p> <br>
+<p> The number is from 1 to 100 </p>
+<label for="GuessedNumber">Enter your number: </label>
+<input id="GuessedNumber"/><br><br>
+<p id="result">Result: </p>
+
+<button onclick="checkIt()">Check it</button>
+<script>
+    var dNumber = Math.floor(Math.random() * 100) + 1; 
+    function checkIt() {     
+        let GNUMBER = Number(document.getElementById("GuessedNumber").value)
+        let result = document.getElementById("result");
+        if(GNUMBER == dNumber) {
+        result.innerHTML = "You are correct!"
+        }   
+
+        else if(GNUMBER < dNumber) {
+        result.innerHTML = "Higher"
+        }
+
+        else  {
+        result.innerHTML = "Lower"
+        }
+        
+        
+    }
+        
+</script>
+
+</body>
