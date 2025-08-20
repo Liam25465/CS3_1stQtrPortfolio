@@ -12,18 +12,24 @@
     function checkIt() {     
         let GNUMBER = Number(document.getElementById("GuessedNumber").value)
         let result = document.getElementById("result");
-        if(GNUMBER == dNumber) {
-        result.innerHTML = "You are correct!"
-        }   
+        if(GNUMBER >= 1 || GNUMBER <= 100) {
+            
+            if(GNUMBER == dNumber) {
+            result.innerHTML = "You are correct!"
+            }   
 
-        else if(GNUMBER < dNumber) {
-        result.innerHTML = "Higher"
-        }
+            else if(GNUMBER < dNumber) {
+            result.innerHTML = "Higher"
+            }
 
-        else  {
-        result.innerHTML = "Lower"
+            else  {
+            result.innerHTML = "Lower"
+            }
+
         }
-        
+        else {
+            alert("Invalid Input: Over or under the limit of 1 to 100 inclusive");
+        }
         
     }
         
